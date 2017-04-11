@@ -1,12 +1,33 @@
-###### display : flex-flow
+###### display : flex
 usar flexbox
 
-###### flex-flow : { flex-direction }{ flex-flow } = flex-direction y flex-wrap
-* flex-wrap : { arg }
-  * wrap : no ajusta el contenido respeta el ancho y crea filas
-  * no-wrap : afecta width para adaptarlo al contenedor
+###### flex-direction : { arg }
+el limite es el tamaño del contenedor
+* row : una acomoda los elementos de izq a der por filas
 
-manejo basico del contenido
+| Header One     | Header Two     | Header Three   |
+| :------------- | :------------- | :------------- |
+| Item One       | Item Two       | item Tree      |
+| Item four      | -              | -              |
+
+* row-reverse
+* column : acomoda de arriba hacia abajo por columnas
+
+| Header One     | Header Two     |
+| :------------- | :------------- |
+| Item One       | Item Four      |
+| Item Two       | -              |
+| Item Three     | -              |
+
+###### flex-wrap : { arg }
+determina si se redimensiona para ajustar a una linea o no
+* wrap : continua si no cabe en la siguiente linea
+* no-wrap : redimensiona para que los elementos quepan en una linea
+
+###### flex-flow : { flex-direction }{ flex-wrap }
+Abreviación de direction y wrap recibiendo en ese orden los argumentos.
+
+## Manejo basico del contenido
 
 ##### justify-content : { arg }  ---> (horizontal)
 * flex-end : inicio de izq a der
@@ -27,7 +48,7 @@ mismos valores que align-items pero especializado para varias filas (flex-wrap :
 ##### flex-basis : { arg }
 el argumento son pixeles y representa width o heigth dependiendo el flex-direction
 
-##### flex-grow : { args }
+##### flex-grow : { numero }
 * numero : proporcion de crecimiento
 al crecer este numero determina que tanto crece con respecto a su contenedor
 
